@@ -1,4 +1,4 @@
-# Progressive Cactus Gene Analysis Pipeline
+# Genomes2Genes Phase I
 
 Extends Progressive Cactus's HAL alignments into gene- and exon-level comparative
 analysis — extraction, multi-exon stitching, frame validation, and codon-level
