@@ -1,4 +1,4 @@
-# Genomes2Genes Phase I
+# Genomes2Genes
 
 Extends Progressive Cactus's HAL alignments into gene- and exon-level comparative
 analysis — extraction, multi-exon stitching, frame validation, and codon-level
@@ -30,8 +30,7 @@ transcript coordinates (BED), the pipeline:
 4. Filters out species/sequences showing atypical genomic jumps (>50kb on the
    same chromosome, or a jump between chromosomes) — likely alignment artifacts,
    though possibly genome assembly or annotation errors.
-5. Fills missing bases from each species' genome FASTA and reverse-complements
-   sequences per the reference strand (MAF tools assume the positive strand by
+5. Reverse-complements sequences per the reference strand (MAF tools assume the positive strand by
    default).
 6. Stitches individual exon blocks into full-length transcripts using the
    reference species' transcript IDs.
@@ -55,7 +54,7 @@ lives in [`docs/Genomes2Genes_Phase_I_README.txt`](docs/Genomes2Genes_Phase_I_RE
 | 1 | `step1_mafextractor.sh` | Extract localized MAF blocks at target coordinates |
 | 2 | `step2_missingbp_summaries.sh` | Summarize species presence / missing bp between blocks |
 | 3 | `step3_filtering_species.py` | Drop species with atypical genomic jumps |
-| 4 | `step4_reverse_complement_add_missingbp.sh` | MAF → aligned FASTA, gap-fill, strand-correct |
+| 4 | `step4_reverse_complement_add_missingbp.sh` | reverse complement strand-correct |
 | 5 | `step5_validate_reverse_complement.py` | Validate strand orientation via local alignment |
 | 6 | `step6_update_summary_files.py` | Sync FASTA-extraction summary with the BED file |
 | 7 | `step7_first_stage_validation.py` | Nucleotide-count integrity check across raw/filtered/extracted files |
