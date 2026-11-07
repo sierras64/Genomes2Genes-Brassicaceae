@@ -47,7 +47,7 @@ transcript coordinates (BED), the pipeline:
 Every step produces its own CSV/TSV summary; the final step compiles a master
 summary across all species. Full usage and arguments for each step are
 documented individually in [`docs/`](docs/); the step-by-step technical detail
-lives in [`docs/Genomes2Genes_Phase_I_README.txt`](docs/Genomes2Genes_Phase_I_README.txt).
+lives in [`docs/Genomes2Genes_README.txt`](docs/Genomes2Genes_README.txt).
 
 | Step | Script | Purpose |
 |------|--------|---------|
